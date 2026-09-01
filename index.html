@@ -173,7 +173,7 @@ function validateStep(){
    for(const [k,msg] of [["FullNameThai","กรุณากรอกชื่อ นามสกุล (ไทย)"],["FullNameEnglish","กรุณากรอกชื่อ นามสกุล (ภาษาอังกฤษ)"],["BirthDate","กรุณากรอกวันเดือนปีเกิด"],["Phone","กรุณากรอกเบอร์โทรศัพท์"],["CurrentAddress","กรุณากรอกที่อยู่ปัจจุบัน"]])if(!applicationData[k])return alert(msg),false;
  }
  if(currentStep===3&&!applicationData.ShirtSize)return alert("กรุณาเลือกไซซ์เสื้อ"),false;
- if(currentStep===4){for(const [k,msg] of [["EmergencyName","กรุณากรอกชื่อผู้ติดต่อฉุกเฉิน"],["EmergencyRelation","กรุณากรอกความสัมพันธ์"],["EmergencyPhone","กรุณากรอกเบอร์โทรฉุกเฉิน"]])if(!applicationData[k])return alert(msg),false;if(!/^0\\d{9}$/.test(applicationData.EmergencyPhone))return alert("กรุณากรอกเบอร์โทรฉุกเฉินให้ถูกต้อง"),false}
+ if(currentStep===4){for(const [k,msg] of [["EmergencyName","กรุณากรอกชื่อผู้ติดต่อฉุกเฉิน"],["EmergencyRelation","กรุณากรอกความสัมพันธ์"],["EmergencyPhone","กรุณากรอกเบอร์โทรฉุกเฉิน"]])if(!applicationData[k])return alert(msg),false;}
  if(currentStep===5&&!applicationData.Under18)return alert("กรุณาเลือกว่าผู้สมัครอายุต่ำกว่า 18 ปีหรือไม่"),false;
  if(currentStep===7&&!applicationData.InternationalTravel)return alert("กรุณาเลือกประสบการณ์การเดินทาง"),false;
  if(currentStep===8){if(!applicationData.ExtraBaggage)return alert("กรุณาเลือกตัวเลือกน้ำหนักกระเป๋า"),false;applicationData.ExtraBaggageFee=applicationData.ExtraBaggage==="ต้องการ"?3560:0}
