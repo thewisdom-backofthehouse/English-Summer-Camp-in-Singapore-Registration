@@ -171,7 +171,6 @@ function validateStep(){
  if(currentStep===1&&!applicationData.TravelRound)return alert("กรุณาเลือกรอบการเดินทาง"),false;
  if(currentStep===2){
    for(const [k,msg] of [["FullNameThai","กรุณากรอกชื่อ นามสกุล (ไทย)"],["FullNameEnglish","กรุณากรอกชื่อ นามสกุล (ภาษาอังกฤษ)"],["BirthDate","กรุณากรอกวันเดือนปีเกิด"],["Phone","กรุณากรอกเบอร์โทรศัพท์"],["CurrentAddress","กรุณากรอกที่อยู่ปัจจุบัน"]])if(!applicationData[k])return alert(msg),false;
-   if(!/^0\\d{9}$/.test(applicationData.Phone))return alert("กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง 10 หลัก"),false;
  }
  if(currentStep===3&&!applicationData.ShirtSize)return alert("กรุณาเลือกไซซ์เสื้อ"),false;
  if(currentStep===4){for(const [k,msg] of [["EmergencyName","กรุณากรอกชื่อผู้ติดต่อฉุกเฉิน"],["EmergencyRelation","กรุณากรอกความสัมพันธ์"],["EmergencyPhone","กรุณากรอกเบอร์โทรฉุกเฉิน"]])if(!applicationData[k])return alert(msg),false;if(!/^0\\d{9}$/.test(applicationData.EmergencyPhone))return alert("กรุณากรอกเบอร์โทรฉุกเฉินให้ถูกต้อง"),false}
